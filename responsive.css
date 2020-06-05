@@ -1,0 +1,312 @@
+/* HEADER */
+#header {
+  min-width: initial;
+  display: flex;
+  height: initial;
+  min-height: 76px;
+}
+#skipNav {
+  display: none;
+}
+#header #header-left {
+  float: none;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+#header #header-logo {
+  float: none;
+  margin: 0;
+}
+#header #header_right {
+  display: flex;
+  align-items: center;
+}
+#header #header-icons {
+  float: none;
+  display: flex;
+  margin: 0;
+}
+#header #header-icons > * {
+  max-height: 34px;
+  max-width: 34px;
+  margin-left: 4px;
+}
+@media only screen and (max-width: 660px) {
+  #header {
+    min-height: 48px;
+  }
+  #header-nadpis {
+    display: none;
+  }
+  #header #header-logo {
+  	flex: 1;
+  	display: flex;
+  	justify-content: center;
+  }
+  #header #header-logo img {
+    height: 40px;
+  }
+  #menu-horizontal-right {
+  	display: none;
+  }
+}
+@media only screen and (max-width: 302px) {
+  #header #header-logo {
+  	display: none;
+  }
+}
+
+
+/* MENU */
+#menu_horizontal {
+  min-width: initial;
+  overflow: initial;
+}
+#menu_horizontal li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 660px) {
+  #menu-horizontal-box {
+    height: initial;
+  }
+  #menu-horizontal-box:not(.expanded) {
+    display: none;
+  }
+  #menu-horizontal-left {
+  	display: flex;
+  	flex-direction: column;
+  	padding: 8px 0;
+  }
+  #menu-horizontal-left li:first-child a {
+  	border-left: none;
+  }
+  #menu-horizontal-left li a {
+  	border-right: none;
+  	width: 100%;
+  	text-align: left;
+  }
+}
+
+#menu {
+  display: none;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+  border: 1px solid #aaa;
+}
+@media only screen and (max-width: 660px) {
+  #menu {
+    display: flex;
+  }
+}
+
+.submenu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: #2f6e99;
+  padding: 1px 0;
+}
+.submenu:not(.expanded) {
+  display: none;
+}
+.submenu li a {
+  border: none;
+  min-width: 150px;
+  text-align: left;
+}
+.submenu li:not(:last-child) a {
+  border-bottom: 1px solid #6e9dbe;
+}
+
+@media only screen and (max-width: 660px) {
+  .submenu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+  }
+  #menu-horizontal-left .submenu li a {
+  	border: none;
+  	padding-left: 36px;
+  }
+}
+
+
+/* CONTENT */
+#main {
+  min-width: initial;
+  display: flex;
+}
+#contentWrapper {
+  float: none;
+  flex: 1;
+  width: initial;
+  margin-left: 0;
+  margin-right: 8px;
+}
+#content {
+  margin-left: 0;
+  max-width: 1000px;
+}
+.rychlaNavigace-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-left: -4px;
+}
+.rychlaNavigace {
+  margin-top: 1em;
+}
+.rychlaNavigace:first-child {
+  margin-left: .4em
+}
+@media only screen and (max-width: 978px) {
+  .rychlaNavigace-box {
+    justify-content: center;
+  }
+}
+
+/* LEFT MENU */
+#menu-vertical {
+  float: none;
+}
+@media only screen and (max-width: 504px) {
+  #main {
+    flex-direction: column;
+  }
+  #menu-vertical {
+    width: 100%;
+    display: flex;
+    margin-left: -8px;
+    margin-top: 1em;
+    flex-wrap: wrap;
+  }
+  #menu-vertical > ul {
+    min-width: 170px;
+    flex: 1;
+    margin-left: 8px;
+  }
+  #menu-vertical > ul > li {
+    list-style-type: none;
+  }
+}
+@media screen and (max-width: 480px) { 
+  #menu-vertical {
+    display: flex;    
+  }
+}
+
+
+
+/* FOOTER */
+#footer {
+  min-width: initial;
+  display: flex;
+  justify-content: space-between;
+  height: initial;
+}
+#footer .copyright {
+  float: none
+}
+#footer .verze {
+  float: none
+}
+@media only screen and (max-width: 696px) {
+  #footer {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  #footer .copyright {
+    text-align: center;
+  }
+  #footer .verze {
+    float: none;
+    margin-top: 2em;
+    text-align: center;
+  }
+}
+
+
+
+@media only screen and (max-width: 1208px) {
+  #header,
+  #main {
+    padding: 0 8px;
+  }
+  #footer {
+    padding: 8px;
+  }
+}
+
+
+/* FORMS */
+input[title="Zadejte název obce"] {
+  max-width: 35em;
+  width: 80% !important;
+}
+input[title="Zadejte název katastrálního území"] {
+  max-width: 35em;
+  width: 80% !important;
+}
+input[title="Zadejte název ulice"] {
+  max-width: 35em;
+  width: 80% !important;
+}
+select[title="Nalezené katastrální území"] {
+  width: 100%;
+  max-width: 300px;
+}
+select[title="Napište kód KP nebo vyberte ze seznamu"] {
+  width: 100%;
+  max-width: 396px;
+}
+@media only screen and (max-width: 660px) {
+  .polozka .fuj label:after {
+  	content: '\A';
+  	white-space: pre;
+  }
+}
+
+
+/* ZOBRAZ OBJEKT */
+.imageWMS {
+  width: 35%;
+}
+.imageWMS img {
+  width: 100%;
+  height: auto;
+}
+table.atributy td.nazev {
+  min-width: 120px;
+  max-width: 14em;
+  width: auto;
+}
+table.vlastnici th:last-child {
+  width: auto;
+}
+table.vlastnici td {
+  white-space: normal;
+}
+
+@media only screen and (max-width: 660px) {
+  .imageWMS {
+    width: 100%;
+    float: none;
+    margin-bottom: 8px;
+  }
+  .imageWMS .inlineButton {
+  	width: 100%;
+  	box-sizing: border-box;
+  	margin-right: 0;
+  }
+  table.atributySMapou {
+  	width: 100%;
+  	float: none;
+  }
+}
